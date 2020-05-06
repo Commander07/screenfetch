@@ -3,6 +3,7 @@
 import socket, getpass, platform, psutil, time, calendar 
 from cpuinfo import cpuinfo
 from colored import fg, bg, attr
+import distro
 
 
 #Colors! Use the ANCI codes found here https://github.com/dslackw/colored
@@ -72,7 +73,7 @@ UserName = getpass.getuser()
 Ver = platform.release()
 Sys = platform.system()
 Bit = platform.processor()
-OS = platform.linux_distribution()
+OS = distro.linux_distribution()
 
 print("{}                          ./+o+-".format(fg(DarkColor)))
 print("{}                  yyyyy-{} -yyyyyy+".format(fg(MedColor), fg(DarkColor)))
